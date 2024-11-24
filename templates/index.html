@@ -1,35 +1,31 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
-<h1>Home</h1>
+<h1>Home </h1>
 
-<div class="row">
-  <div class="col-12 col-md-12 col-lg-4">
-    <!-- This column will be full width on small screens, 
-
-           half width on medium screens, 
-
-           and one-third width on large screens -->
-    1
-  </div>
-
-  <div class="col-12 col-md-12 col-lg-4">
-    <!-- This column will be full width on small screens, 
-
-         half width on medium screens, 
-
-         and one-third width on large screens -->
-    2
-  </div>
-
-  <div class="col-12 col-md-12 col-lg-4">
-    <!-- This column will be full width on small screens, 
-
-       half width on medium screens, 
-
-       and one-third width on large screens -->
-    3
+<div class="container">
+  <div class="row">
+    {% for i in range(12)%}
+    <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-2">
+      <div class="card" style="width: 18rem">
+        <img
+          src="data:image/png;base64,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"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Game</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
 
-<!-- Add your page-specific content here -->
-{% endblock %}
+  <!-- Add your page-specific content here -->
+  {% endblock %}
+</div>
