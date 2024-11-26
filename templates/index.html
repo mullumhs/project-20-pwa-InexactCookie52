@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+
 <h1>Home </h1>
 
 <div class="container">
@@ -18,7 +18,16 @@
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- Button trigger modal -->
+                    <button
+                    type="button"
+                    class="btn btn-primary me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2"
+                  >
+                    Edit
+                  </button>
+          <button href="#" class="btn btn-primary mb-1">Delete </button>
         </div>
       </div>
     </div>
@@ -26,6 +35,39 @@
   </div>
 </div>
 
+<!-- Modal -->
+<div
+class="modal fade"
+id="exampleModal2"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel"> Edit</h1>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal"
+      >
+        Close
+      </button>
+      <button type="button" class="btn btn-primary">Save Changes</button>
+    </div>
+  </div>
+</div>
+</div>
   <!-- Add your page-specific content here -->
   {% endblock %}
 </div>
+
