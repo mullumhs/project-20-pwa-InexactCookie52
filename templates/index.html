@@ -18,7 +18,7 @@
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-                <!-- Button trigger modal -->
+                <!-- edit Button trigger modal -->
                     <button
                     type="button"
                     class="btn btn-primary me-2"
@@ -27,7 +27,15 @@
                   >
                     Edit
                   </button>
-          <button href="#" class="btn btn-primary mb-1">Delete </button>
+                            <!-- delete Button trigger modal -->
+                  <button
+                  type="button"
+                  class="btn btn-primary me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal3"
+                >
+                  Delete
+                </button>
         </div>
       </div>
     </div>
@@ -47,22 +55,85 @@ aria-hidden="true"
   <div class="modal-content">
     <div class="modal-header">
       <h1 class="modal-title fs-5" id="exampleModalLabel"> Edit</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      ></button>
     </div>
+
+    <div class="modal-body">
+      <!------------------------------ modal body ------------------------------------------------->
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="title" class="form-label">Game Title</label>
+          <input type="text" class="form-control" id="game_title" name="title"/>
+        </div>
+
+        <div class="col-12">
+          <label for="title" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description"/>
+        </div>
+
+        <div class="col-12, col-lg-6">
+          <label for="title" class="form-label">Relese Year</label>
+          <input type="text" class="form-control" id="relese-Year" name="relese_year"/>
+        </div>
+
+        <div class="col-12, col-lg-6">
+          <label for="title" class="form-label">Publisher</label>
+          <input type="text" class="form-control" id="publisher" name="publisher"/>
+        </div>
+
+        <div class="col-md-4">
+          <label for="title" class="form-label">Genre</label>
+          <select id="inputState" class="form-select" name="Genre">
+            <option selected>Choose...</option>
+            <option>Action</option>
+            <option>Horror</option>
+            <option>platformer</option>
+            <option>FPS shooters</option>
+            <option>adventure</option>
+            <option>MMO RPG</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
     <div class="modal-footer">
       <button
         type="button"
-        class="btn btn-secondary"
+        class="btn btn-primary"
         data-bs-dismiss="modal"
-      >
-        Close
-      </button>
-      <button type="button" class="btn btn-primary">Save Changes</button>
+        aria-label="Close"
+      > Close</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Save Changes</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div
+class="modal fade"
+id="exampleModal3"
+tabindex="-1"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete</h1>
+    </div>
+    <div class="modal-body">
+      <h4>
+        Are You Sure You Want To Delete?
+      </h4>
+  </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      > Cancel</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Delete</button>
     </div>
   </div>
 </div>

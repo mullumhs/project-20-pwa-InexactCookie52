@@ -7,6 +7,6 @@ db = SQLAlchemy()
 class game(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     title = db.Column(db.String(100), nullable = False)
-    dev = db.Column(db.String(100), nullable = False)
+    develeoper = db.Column(db.String(100), nullable = False)
     year = db.Column(db.Integer, nullable = True)
     genre = db.Column(db.String(100), nullable = True)
