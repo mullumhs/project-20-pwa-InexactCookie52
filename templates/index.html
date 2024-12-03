@@ -51,15 +51,17 @@ tabindex="-1"
 aria-labelledby="exampleModalLabel"
 aria-hidden="true"
 >
+
+
 <div class="modal-dialog">
-  <div class="modal-content">
+  <form class="modal-content" action = "update" method="post">
     <div class="modal-header">
       <h1 class="modal-title fs-5" id="exampleModalLabel"> Edit</h1>
     </div>
 
     <div class="modal-body">
       <!------------------------------ modal body ------------------------------------------------->
-      <form class="row g-3">
+      <div class="row g-3">
         <div class="col-12">
           <label for="title" class="form-label">Game Title</label>
           <input type="text" class="form-control" id="game_title" name="title"/>
@@ -92,7 +94,7 @@ aria-hidden="true"
             <option>MMO RPG</option>
           </select>
         </div>
-      </form>
+      </div>
     </div>
 
     <div class="modal-footer">
@@ -102,9 +104,14 @@ aria-hidden="true"
         data-bs-dismiss="modal"
         aria-label="Close"
       > Close</button>
-      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Save Changes</button>
+
+      <button type="submit" 
+      class="btn btn-primary" 
+      data-bs-dismiss="modal" 
+      aria-label="Close"
+      >Save Changes</button>
     </div>
-  </div>
+  </form>
 </div>
 </div>
 
@@ -133,7 +140,11 @@ aria-hidden="true"
         data-bs-dismiss="modal"
         aria-label="Close"
       > Cancel</button>
-      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Delete</button>
+      <button type="button" 
+      class="btn btn-primary" 
+      data-bs-dismiss="modal" 
+      aria-label="Close"
+      >Delete</button>
     </div>
   </div>
 </div>

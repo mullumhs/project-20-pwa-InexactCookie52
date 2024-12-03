@@ -7,12 +7,14 @@ This repository contains the Progressive Web Application (PWA) project for the M
 ## Project Tasks
 
 ### Task 1: Project Setup and Planning
+
 - Set up Flask project with proper folder structure
 - Initialize Git repository
 - Design database schema for chosen collection type (Books, Movies, Music, Video Games, or Recipes)
 - Create wireframes for desktop and mobile layouts
 
 ### Task 2: Backend Development with Flask
+
 - File: `app.py`, `models.py`, `views.py`
 - Description: Set up the Flask application with database integration and routing
 - This task covers:
@@ -22,6 +24,7 @@ This repository contains the Progressive Web Application (PWA) project for the M
   - Request handling with proper HTTP methods
 
 ### Task 3: User Interface and Design
+
 - Files: `templates/*.html`, `static/css/`
 - Description: Create responsive templates and styling
 - This task covers:
@@ -31,6 +34,7 @@ This repository contains the Progressive Web Application (PWA) project for the M
   - Custom CSS styling
 
 ### Task 4: Core Features
+
 - Description: Implement all required application functionality
 - This task covers:
   - Item creation with validation
@@ -40,6 +44,7 @@ This repository contains the Progressive Web Application (PWA) project for the M
   - Search and filter features
 
 ### Task 5: PWA Implementation
+
 - Files: `manifest.json`, `service-worker.js`
 - Description: Add Progressive Web App features
 - This task covers:
