@@ -12,8 +12,8 @@ def init_routes(app):
     @app.route('/', methods=['GET'])
     def get_items():
         # This route should retrieve all items from the database and display them on the page.
-        game = Game.querie
-        return render_template('index.html', message='Displaying all items')
+        games = Game.query.all()
+        return render_template('index.html', games = games)
 
 
 
@@ -27,7 +27,10 @@ def init_routes(app):
                 publisher=request.form['publisher'],
                 genre=request.form['genre']
         )
-        return render_template('index.html', message='Item added successfully')
+            db.session.add(new_game)
+            db.session.commit()
+            return redirect(url_for("get_items"))
+        #return render_template('index.html', message='Item added successfully')
     
 
     @app.route('/update', methods=['POST'])
