@@ -38,7 +38,12 @@ def init_routes(app):
         # This route should handle updating an existing item identified by the given ID.
         return render_template('index.html', message=f'Item updated successfully')
 
-
+    @app.route('/edit', methods=['GET'])
+    def edit():
+        # This route should retrieve all items from the database and display them on the page.
+        id = request.args.get('id')
+        game = Game.query.get(id)
+        return render_template('edit.html', game = game)
 
     @app.route('/delete', methods=['POST'])
     def delete_item():
