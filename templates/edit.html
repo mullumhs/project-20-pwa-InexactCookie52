@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block title %}Edit{% endblock %} {% block content%}
 <h2>Edit</h2>
-<form class="modal-body" method="post">
+<form class="modal-body" method="post" action="/update">
+  <input type="hidden" name="id" value="{{game.id}}" />
   <!------------------------------ modal body ------------------------------------------------->
   <div class="row g-3">
     <div class="col-12">
@@ -31,7 +32,7 @@
         type="text"
         class="form-control"
         id="relese-Year"
-        name="relese_year"
+        name="year"
         value="{{game.year}}"
       />
     </div>
@@ -49,7 +50,7 @@
 
     <div class="col-md-4">
       <label for="title" class="form-label">Genre</label>
-      <select id="inputState" class="form-select" name="Genre">
+      <select id="inputState" class="form-select" name="genre">
         <option selected>{{game.genre}}</option>
         <option>Action</option>
         <option>Horror</option>

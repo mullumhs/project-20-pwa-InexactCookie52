@@ -35,11 +35,19 @@ def init_routes(app):
 
     @app.route('/update', methods=['POST'])
     def update_item():
-        # This route should handle updating an existing item identified by the given ID.
+        id = request.form["id"]
+        game = Game.query.get(id)
+        game.title=request.form['title']
+        game.description=request.form['description']
+        game.year=request.form['year']
+        game.publisher=request.form['publisher']
+        game.genre=request.form['genre']
+        db.session.commit()
         return render_template('index.html', message=f'Item updated successfully')
 
     @app.route('/edit', methods=['GET'])
     def edit():
+
         # This route should retrieve all items from the database and display them on the page.
         id = request.args.get('id')
         game = Game.query.get(id)
