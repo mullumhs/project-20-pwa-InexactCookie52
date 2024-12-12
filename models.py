@@ -11,3 +11,4 @@ class Game(db.Model):
     year = db.Column(db.Integer, nullable = True)
     publisher = db.Column(db.String(100), nullable = True)
     genre = db.Column(db.String(100), nullable = True)
+    image = db.Column(db.String(10000), nullable = True)
