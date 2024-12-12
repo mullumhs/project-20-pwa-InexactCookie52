@@ -1,15 +1,15 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
 
-<h1>Home </h1>
+<h1 class="container-fluid">Welcome To The Game Database! </h1>
 
 <div class="container">
   <div class="row">
     {% for game in games%}
-    <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-2">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
       <div class="card" style="width: 18rem">
         <img
           src="{{game.image}}"
-          onerror="this.src='data:image/png;base64,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'"
+          onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAAB9fX1LS0ulpaUwMDCenp6Ojo6GhoY+Pj7V1dWWlpZ0dHTIyMhra2thYWG7u7tWVlbi4uKtra20tLTo6OjCwsLc3Nzu7u7Pz8+YmJhYWFiqqqpRUVE2NjZubm4fHx8pKSkTExNISEhT0aQLAAADO0lEQVR4nO3dbVeiQBiAYVdRJCxrVSp829b//x9XYM7J2QhnEHkepvv6lsFp7sOHx5fBRiMAAAAAAAAAAICfbf1n2sbHk/TCna1+tfMivXBnFFKoX/iF65aFW+mFX7eaJoWPasHxW8n9iv4tz040D43IWnBePfjseylPshGN7MK0etC7cCIb0YhCCodWOKsezMIt/JiUDuEWtkWhJAoppFAehRRSKI9CCimURyGFFMqj0E0indHAvXD5+vCtV+mMBu6FC+mltkQhhfpR+JMKD4tLufTCnbWd+APYomC0LVxKL9wZhRTqt2tZOIDtXtliXNg7XK73x68epNd/3cz5co2ll9oShRTqF36h+yAUK8znhfGb73nZuDzRYUxIF56qv//b97zUOU26cELhNyiksD9tC/NwC7O4kL74Fp7S+MLqjkn/8S6MfdNq9fjSV6iwx9tjKPyCQq2FG+cTvAehksJ5np7FTS8xsuKINPceE8b2eV1IpQqNpk/Sx+2vWMFM/AfFhfNOCt8p7ByFn8IobBqLnRb2/7zUmM8KuT0ds/LByP1Np6bCzW51tsukCg37A5PFbWl2Yf8cCm8chBTeG4WjMAvtsRhiYbyLPu1uHBMqC++BQgoppPD+xLbO3r9wH5WvTXp8NdF34VwqjUIKKVRTmARfGJWfRsy8v9NpOIXGNvjCtp8oUUhhf8Iv7Oa9mFpKNgdH1U6nTofGvtoF9SzdZll2WZhK19TptDCWrqlDIYX6Czt9eqqyMCpvoohvHBr76h4OXWPCdrytcCa9/uuebitUOQhtFFIovf7rwi+Myhu0x/5fOV6ettA8Jmzem6Ei6RX78i4cwCC0UUihft5PTwdXGB3LL3NyHxqDKzTc97VRqBWFFOr3Qwsnx6ezYxJuoXmFVPuvrAantnBd/W5G4SBQSKF+duFpWdg+Vr9bb8sfk5AKa/f67kIqrH2rMKJQNwpHFKpnCpPty9nkse6QMApr04wwCptueqFQOQpHFKpnCldvm0LtV0mZwrjhEM3sib+uO8R+Q0rlhrYm7s9pjAHsxbBROKJQvfAL40PyaVo7FlfTi0MOg9s4BAAAAAAAAAAAAADAPf0D8LtGGt1CjJgAAAAASUVORK5CYII='"
           class="card-img-top"
           alt="..."
         />
@@ -29,7 +29,7 @@
           <p class="card-text">
             Genre: {{game.genre}}
           </p>
-                <!-- edit Button trigger modal -->
+<!------------------------------------------------------------------- edit Button   ----------------------------------------------------------------------------->
                 <a href="{{ url_for('edit', id=game.id) }}">
                     <button
                     type="button"
@@ -38,13 +38,13 @@
                     Edit
                   </button>
                 </a>
-                  <!-- delete Button trigger modal -->
+<!-------------------------------------------------------------- delete Button -------------------------------------------------->
                   
                   
                 <a href="{{ url_for('delete_item', id=game.id) }}">
                     <button
                     type="button"
-                    class="btn btn-primary me-2"
+                    class="btn btn-danger me-2"
                   >
                     Delete
                   </button>

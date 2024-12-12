@@ -7,6 +7,7 @@ from models import db, Game# Also import your database model here
 # You can use render_template or redirect as appropriate
 # You can also use flash for displaying status messages
 
+
 def init_routes(app):
 
     @app.route('/', methods=['GET'])
